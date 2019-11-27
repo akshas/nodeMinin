@@ -1,0 +1,29 @@
+<%- include ("./layouts/header") %>
+<h1><%= data.title %></h1>
+<% if (data.length != -1) { %>
+<% data.todos.forEach(function(todo){%>
+
+<ul class="collection">
+    <li class="todo collection-item">
+        <form action="/complete" method="POST">
+            <label>
+                <% if (data.completed) {%>
+                <input type="checkbox" checked>
+                <span class="completed"><%= todo.title %> </span>
+                <%} else {%>
+                <input type="checkbox">
+                <span><%= todo.title %> </span>
+                <%}%>
+
+                 <button class="delete secondary-content"><i class="material-icons">delete</i></button>
+
+             </label>
+        </form>
+
+    </li>
+</ul>
+<%})%>
+                <%} else {%>
+                <p>No Todos!</p>
+                <%}%>   
+<%- include ("./layouts/footer") %>

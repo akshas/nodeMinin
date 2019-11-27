@@ -1,0 +1,54 @@
+body {
+    background-color: #ddd;
+    color: #5c6bc0;
+}
+
+.flex-wrap {
+    display: flex;
+    align-items: center;
+}
+
+input[type=text] {
+    min-width: 300px;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid rgb(61, 8, 71) !important;
+    box-shadow: 0 1px 0 0 rgb(104, 9, 107) !important;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus+label {
+    color: rgb(141, 22, 165) !important;
+}
+
+.btn {
+    margin-left: 20px;
+}
+
+.collection-item {
+    /* cursor: pointer; */
+    text-transform: capitalize;
+}
+
+.collection .delete i {
+    color: #e53935;
+    cursor: pointer;
+}
+
+.collection .check i {
+    color: #1b8b37;
+}
+
+.collection-item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
